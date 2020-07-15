@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  My Weather App
+</mat-toolbar>
+<div class="content">
+  <div class="flex-row">
+    <mat-form-field class="mr">
+      <mat-label>Select country</mat-label>
+      <mat-select [formControl]="countryControl">
+        <mat-option *ngFor="let country of countries" [value]="country">
+          {{country.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select city</mat-label>
+      <mat-select [formControl]="cityControl">
+        <mat-option *ngFor="let city of cities$ | async" [value]="city">
+          {{city}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <br />
+  <router-outlet></router-outlet>
+</div>
