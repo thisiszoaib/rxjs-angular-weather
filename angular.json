@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "rxjs-angular-weather"
+  "defaultProject": "rxjs-angular-weather",
+  "cli": {
+    "analytics": "2a97a5c4-2404-4a8d-80cf-6770e590d2a0"
+  }
 }
